@@ -62,13 +62,27 @@ console.table(fifteen);
 
     // 5. Sort the inventors by years lived
 
-    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    const birthDate = inventors.sort(function(a,b) {
+      const x = a.passed - a.year;
+      const y = b.passed - b.year;
 
+      if ( x > y) {
+        return -1;
+      } else{
+      return 1;
+      }
+    });
 
-    // 7. sort Exercise
-    // Sort the people alphabetically by last name
+//     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+//     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+// const category = document.querySelector('.nw-category');
+//     // 7. sort Exercise
+//     // Sort the people alphabetically by last name
+
+const alfabet = data.sort(function(lastOne, nextOne){
+  console.log(lastOne);
+})
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
